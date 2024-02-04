@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     
     font-family: 'League Spartan', sans-serif;
     font-size: 1.0625rem;
+
   }
 
   a{
@@ -34,24 +35,38 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .wrapper {
-    width: 80%;
-    height: 300px;
+    width: 85%;
+    /* height: 300px; */
     max-width: 1110px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-block: 6rem;
-    text-align: center;
+    margin: 30px auto;
+    /* padding-inline: 2rem; */
+    /* margin-block-end: 2rem; */
+    /* text-align: center; */
+    /* background-color: lightblue; */
+  }
+  .header {
+      display: flex;
+      flex-direction: column;
   }
 
-  .header {
+  .wrapperCards {
+    /* margin: 0; */
+    width: 100%;
+    height: 230px;
+    /* max-width: 1110px; */
     display: flex;
     flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    gap: .5rem;
+    margin-block-end: 1rem;
+    /* background-color: lightgreen; */
   }
 
+  
+
 @media screen and (min-width: 768px) {
-  .wrapper {
-    width: 80%
-  }
+
   .header {
     flex-direction: row;
     justify-content: space-between;
@@ -64,20 +79,26 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .header__right {
-    width: 65%;
-    position: relative;
-    background-color: orange;
-    justify-content: center;
+    width: 55%;
+    /* position: relative; */
+    /* background-color: orange; */
+    /* justify-content: center; */
     /* display: flex; */
   }
+  .wrapperCards {
+    flex-direction: row;
+  }
 
-  main {
+  
+  
+
+  /* main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-right: 1rem;
 
-  }
+  } */
 
 }
 

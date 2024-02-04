@@ -1,5 +1,23 @@
 import styled from "styled-components";
 
+const StyledRatedsContainer = styled.div`
+    display: flex;
+    
+
+    @media screen and (min-width: 768px) {
+        /* justify-content: space-between; */
+        &:nth-child(1) {
+            justify-content: left;
+        }
+        &:nth-child(2) {
+            justify-content: center;
+        }
+        &:nth-child(3) {
+            justify-content: right;
+        }
+    }
+`;
+
 const StyledRateds = styled.div`
     width: 100%;
     padding-top: 0.7rem;
@@ -7,7 +25,7 @@ const StyledRateds = styled.div`
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     background-color: #F7F2F7;
@@ -19,21 +37,10 @@ const StyledRateds = styled.div`
     @media screen and (min-width: 768px) {
         width: 445px;
         height: 56px;
-        display: flex;
         flex-direction: row;
-        position: absolute;
-		left: ${({ left }) => left + 'px'};
-		top: ${({ top }) => top + 'px'};
 
-        /* &:nth-child(1) {
-            align-items: center;
-        }
-
-        &:nth-child(2) {
-            align-items: end;
-        } */
     }
 `;
 
 
-export { StyledRateds};
+export { StyledRatedsContainer, StyledRateds};

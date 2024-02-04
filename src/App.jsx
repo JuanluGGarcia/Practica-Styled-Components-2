@@ -1,9 +1,11 @@
+// import { v4 } from "uuid";
 import Card from "./components/card/Card";
 // import CardsContainer from "./components/cardscontainer/CardsContainer";
 import HeaderSubTitle from "./components/headersubtitle/HeaderSubTitle";
 import HeaderTitle from "./components/headertitle/HeaderTitle";
 import Rateds from "./components/rateds/Rateds";
 import { InfoCards } from "./constants/InfoCards";
+import { RATEDSTEXT } from "./constants/ratedsText";
 import { GlobalStyles } from "./styles/GlobalStyles";
 // import Wrapper from "./wrapper/Wrapper";
 
@@ -20,25 +22,33 @@ const App = () => {
 					</div>
 
 					<div className="header__right">
-						<Rateds text="Rated 5 Stars in Reviews" top={0} left={0} />
-						<Rateds text="Rated 5 Stars in Report Guru" top={70}
-						left={25}  />
-						<Rateds text="Rated 5 Stars in BestTech" top={140} left={45} />
+						{RATEDSTEXT.map(ratedText => {
+							return (
+								<Rateds key={ratedText.id}
+									text={ratedText.text} />
+							);
+						})}
+						{/* <Rateds text="Rated 5 Stars in Reviews" />
+						<Rateds text="Rated 5 Stars in Report Guru"  />
+						<Rateds text="Rated 5 Stars in BestTech" /> */}
 
 					</div>			
 				</header>
 
 				<main>
-					{InfoCards.map(infocard => (
-						<Card
-							key={infocard.id}
-							urlImage={infocard.urlImage}
-							name={infocard.name}
-							verified={infocard.verified}
-							information={infocard.information}
-						/>
-
-					))}
+					<div className="wrapperCards">
+						{InfoCards.map(infocard => {
+							return (
+								<Card
+									key={infocard.id}
+									urlImage={infocard.urlImage}
+									name={infocard.name}
+									verified={infocard.verified}
+									information={infocard.information}
+								/>
+							);
+						})}
+					</div>
 				</main>
 			</div>
 		</>

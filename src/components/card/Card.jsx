@@ -1,24 +1,34 @@
-import { StyledCardContainer, StyledCardHeader, StyledCardHeaderImage, StyledCardHeaderInformation, StyledCardHeaderLeft, StyledCardHeaderNameUser, StyledCardHeaderVerified } from "./styles";
+import {
+    StyledWrapperCards,
+	StyledCardContainer,
+	StyledCardHeader,
+	StyledCardHeaderImage,
+	StyledCardHeaderInformation,
+	StyledCardHeaderLeft,
+	StyledCardHeaderNameUser,
+	StyledCardHeaderVerified
+} from './styles';
 
 const Card = ({ urlImage, name, verified, information }) => {
-    return (
-        <>
-            <StyledCardContainer>
-                <StyledCardHeader>
-                    <StyledCardHeaderImage src={urlImage} /> 
-                    
-                    <StyledCardHeaderLeft>
-                        <StyledCardHeaderNameUser>{name}</StyledCardHeaderNameUser>
-                        <StyledCardHeaderVerified>{verified}</StyledCardHeaderVerified>
-                    </StyledCardHeaderLeft>
+	return (
+		<>
+			<StyledWrapperCards>
+				<StyledCardContainer>
+					<StyledCardHeader>
+						<StyledCardHeaderImage src={urlImage} />
 
-                </StyledCardHeader>
-                <StyledCardHeaderInformation>{information}</StyledCardHeaderInformation>
-            </StyledCardContainer>
-        </>
-        
-    );
-    
+						<StyledCardHeaderLeft>
+							<StyledCardHeaderNameUser>{name}</StyledCardHeaderNameUser>
+							<StyledCardHeaderVerified>{verified}</StyledCardHeaderVerified>
+						</StyledCardHeaderLeft>
+					</StyledCardHeader>
+					<StyledCardHeaderInformation>
+						{information}
+					</StyledCardHeaderInformation>
+				</StyledCardContainer>
+			</StyledWrapperCards>
+		</>
+	);
 };
 
 export default Card;
