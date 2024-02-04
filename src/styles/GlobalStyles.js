@@ -36,13 +36,9 @@ export const GlobalStyles = createGlobalStyle`
 
   .wrapper {
     width: 85%;
-    /* height: 300px; */
     max-width: 1110px;
     margin: 30px auto;
-    /* padding-inline: 2rem; */
-    /* margin-block-end: 2rem; */
-    /* text-align: center; */
-    /* background-color: lightblue; */
+
   }
   .header {
       display: flex;
@@ -50,14 +46,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .wrapperCards {
-    /* margin: 0; */
+
     width: 100%;
     height: 230px;
-    /* max-width: 1110px; */
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     gap: .5rem;
     margin-block-end: 1rem;
     /* background-color: lightgreen; */
@@ -80,26 +73,10 @@ export const GlobalStyles = createGlobalStyle`
 
   .header__right {
     width: 55%;
-    /* position: relative; */
-    /* background-color: orange; */
-    /* justify-content: center; */
-    /* display: flex; */
   }
   .wrapperCards {
     flex-direction: row;
   }
-
-  
-  
-
-  /* main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 1rem;
-
-  } */
-
 }
 
 `;

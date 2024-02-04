@@ -5,7 +5,6 @@ const StyledRatedsContainer = styled.div`
     
 
     @media screen and (min-width: 768px) {
-        /* justify-content: space-between; */
         &:nth-child(1) {
             justify-content: left;
         }

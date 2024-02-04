@@ -30,12 +30,6 @@ const StyledCardContainer = styled.div`
 	background-color: #512051;
 	font-size: 1.0625rem;
 
-	@media screen and (min-width: 768px) {
-		/* width: 33%;
-		height: 190px; */
-
-		
-	}
 `;
 
 const StyledCardHeader = styled.div`
